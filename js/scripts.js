@@ -191,8 +191,8 @@ const handleTeamFormSubmit = (event) => {
 		if (val) {
 
 			let post_fd = new FormData(event.target)
-
-			fetch("https://script.google.com/macros/s/AKfycbxJV6AfMf3jP12NUhu5ncrNBnvKQjdYcjU_VDDdbSlTD05VbGBCrB5ZyQ/exec", {
+			const url = "https://script.google.com/macros/s/AKfycbxJV6AfMf3jP12NUhu5ncrNBnvKQjdYcjU_VDDdbSlTD05VbGBCrB5ZyQ/exec"
+			fetch(url, {
 				method: "POST",
 				body: post_fd,
 				// headers: {
