@@ -122,6 +122,7 @@ const setTeamForm = (total) => {
   <div class="form-group floating-label-form-group controls mb-0 pb-2">
       <label>Phone Number of Team Member ${count}</label>
       <input class="form-control" name="phone_${count}" id="phone-${count}" type="tel"
+	  pattern=[0-9]{10} minlength=10 maxlength=10
           placeholder="Phone Number of Team Member ${count}" required="required"
           data-validation-required-message="Please enter your phone number." />
       <p class="help-block text-danger"></p>
@@ -205,7 +206,7 @@ const handleTeamFormSubmit = (event) => {
 				if (json_resp.result == 'success') {
 					swal({
 						title: "Your Response has been recorded !",
-						text: "Your details have been received. Thanks and have a nice day.!",
+						text: "An Email has been sent to the above entered Mail Address. Thanks and have a nice day.!",
 						icon: "success",
 						button: "Go",
 					}).then(() => { window.location.reload() })
